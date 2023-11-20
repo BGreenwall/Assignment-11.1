@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Time!!</title>
+    <script src = "./game.js"></script>
+
+
+</head>
+<body style="background-color: lightblue;"> <!-- changing color  -->
+<h1 style= "font-family: Arial, sans-serif;" >Blackout Dice Game</h1><br> <!-- changing font and paragraph  -->
+<p1>To play the game, first click the "Click to Find Sum" button. This will generate the sum of two random numbers. (Sum ranges from 2 to 12)</p1><br>
+<p1>If the sum is greater than 7, then you Win. If the the sum is less than 7, you Lose, and if the sum equals 7, it is called a Blackout.</p1><br>
+<p1>To see the results, click the "Click to see Results" button (Refresh page to go again).</p1><br>
+
+
+
+<button  onclick = "findsum()"> Click to Find Sum </button> <br> <!-- calling function to find sum and display results  -->
+<button  onclick = "displayResult()"> Click to See Results </button> <br>
+<p id = "answer">    </p> <br>
+
+
+
+
+<p1> Below, click Play Sound, to listen to what it sounds like in a space station!</p1><br> <!-- description  -->
+
+
+<audio id="myAudio"> <!-- clalling audio and using script in html to produce it when a button is clicked  -->
+    <source src="program_audio.m4a" type="audio/mpeg">  </audio>
+
+  <button onclick="playSound()">Play Sound</button> <br>
+
+  <script>
+    function playSound() {
+      var audio = document.getElementById("myAudio");
+      audio.play();
+    }
+  </script>
+
+
+
+<img src="space.jpg"  width="500" height="450"> <!-- putting in a image  -->
+
+
+</body>
+</html>
